@@ -1,0 +1,83 @@
+---
+title: "HW1_james_ash"
+output: pdf_document
+date: "`r Sys.Date()`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+Write at least one (typed) page answering the following questions. Note: none of your responses will be shared with others, only your instructors will read them.
+
+  Reflect on Week 1 of class: How did it go? Is there anything you're uneasy about? Anything we should know?
+  
+  Tell us about a time in your life when you have felt successful in mathematics.
+
+  Tell us about a time when you have felt defeated in mathematics.
+
+  Any questions you have for us?
+
+
+
+I'm really happy with the first week of class. 
+
+I've registered for both calculus $III$ and introduction to advanced mathmatics. 
+I have not taken math courses in a long time, and I'm concerend I will not be 
+able to do well in either class. 
+
+For calculus III, I know what to expect. I think of it as apart of the 
+"engineering" math group. This group includes the other calculus classes, linear 
+algebra, and differentail equations. All similarly stick to an age old 
+itinerary, that consists of a heavy work load with marathon homework 
+assignemnts.
+
+Advanced mathmatics is a bit of a wild card. I've never taken any proof based 
+course, or set theary, number theary etc (I still think a pile can't have zero 
+elements). 
+
+Unless you consider statistic courses math courses. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
