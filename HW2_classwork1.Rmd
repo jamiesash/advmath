@@ -1,0 +1,171 @@
+---
+title: "Untitled"
+output: pdf_document
+date: "2022-08-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 2:**
+
+This statement is a disjunction that can be broken down into two propositions:
+  1) the number of heads in a pile is equal to the number of tails in the other 
+     pile (Q)
+  2) the number of tails in a pile is equal to the number of heads in the other 
+     pile (R)
+
+So the statement can be represented as...
+
+$$
+Q \vee R
+$$
+It is assumed that each coin is two sided with one side that is heads and the 
+other side is tails. Therefore the number of heads up coins plus the number of 
+tails up coins equals the size of the pile. 
+
+$$
+H_{og} + T_{og} = P_{og}
+$$
+
+Similarly when the coins are separated into two separate piles ($P_1$ and $P_2$) 
+the size of those piles are equal to the sum of heads and tails coins. 
+
+$$ 
+\begin{aligned}
+ H_1 + T_1 = P_1  \\
+ H_2 + T_2 = P_2
+\end{aligned}
+$$
+
+By extension the number of heads in pile one ($H_1$) plus the number of heads in
+pile two ($H_2$) is equal the he number of heads in the original pile 
+($P_{og}$). The same is true for the number of tails.
+
+$$ 
+\begin{aligned}
+ H_1 + H_2 = H_{og}  \\
+ T_2 + T_2 = T_{og}
+\end{aligned}
+$$
+Using this notation, the propositions $Q$ and $R$ becomes...
+$$
+\begin{aligned}
+ Q: H_1 = T_2 \\
+ R: T_1 =H_2
+\end{aligned}
+$$
+
+If we set the size of $P_1$ and $P_2$ to be equal to the number of heads and 
+tails in $P_{og}$, and solve for either in $H_1, H_2, T_1,$ and $T_2$ in the 
+proposition $Q \vee R$, we find the truth value of Q to always be TRUE and R to
+always be false. 
+
+$$
+\begin{aligned}
+ P_1 = T_{og} \\
+ P_2 = H_{og}
+\end{aligned}
+$$
+Showing $Q$ is always true when $P_2 = H_{og}$:
+$$
+\begin{aligned}
+ T_2 = H_1 \\ 
+ P_2 - H_2 = \\
+ H_{og} - H_2 = \\
+ H_1 + H_2 - H_2 = \\
+ H_1 = H_1
+\end{aligned}
+$$
+
+Showing $R$ is only true when $T_0 = H_0$ when $P_1 = T_{og}$ in way too many 
+steps: 
+$$
+\begin{aligned}
+ T_1 = H_2 \\ 
+ T_{og} - H_2 = \\
+ T_{og} - (P_2 - H_2) \\
+ (P_{og} - H_0) - (P_2 - H_2) = \\
+ (P_{og} - H_0) - (H_0 - H_2) = \\
+ P_{og} - H_0 - H_0 + H_2 = \\
+ P_{og} - 2H_0 = 0 \\
+ P_{og} = 2H_0 \\
+ T_0 + H_0 = 2H_0 \\
+ T_0 = H_0
+\end{aligned}
+$$
+
+If we swapped $P_2 = H_{og}$ and $P_1 = T_{og}$ so that $P_2 = T_{og}$ and 
+$P_1 = H_{og}$, then then the truth value of Q and R would be swapped as well.  
+
+When $H_0 \neq T_0$, and we set $P_2 = H_{og}$ and $P_1 = T_{og}$, then Q is 
+always true, and R is always false. So the proposition $Q \vee R$ is always 
+true. 
+
+When $H_0 \neq T_0$, and we set $P_2 = H_{og}$ and $P_1 = T_{og}$, then Q is 
+always true, and R is always false. So the proposition $Q \vee R$ is always 
+true. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

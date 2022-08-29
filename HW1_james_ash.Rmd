@@ -1,5 +1,6 @@
 ---
-title: "HW1_james_ash"
+title: "Homework 1"
+author: "Jamie Ash"
 output: pdf_document
 date: "`r Sys.Date()`"
 ---
@@ -8,21 +9,8 @@ date: "`r Sys.Date()`"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-
-
-Write at least one (typed) page answering the following questions. Note: none of your responses will be shared with others, only your instructors will read them.
-
-  Reflect on Week 1 of class: How did it go? Is there anything you're uneasy about? Anything we should know?
-  
-  Tell us about a time in your life when you have felt successful in mathematics.
-
-  Tell us about a time when you have felt defeated in mathematics.
-
-  Any questions you have for us?
-
-
-I'm really happy with the first week of class. 
+I'm really happy with the first week of class. It has gone well. Alot of work 
+but hopefully I'll be able to keep up. 
 
 I'm uneasy about taking math classes this semester. I've registered for both 
 calculus $III$ and introduction to advanced mathematics. I have not taken math 
@@ -38,33 +26,31 @@ I could do well, but I'm pretty busy.
 Introduction to advanced mathematics is a bit of a wild card. I've never taken 
 any proof based course, set theory, or number theory class. I really don't know 
 what to expect. So far I really like the class, and I'm actually excited to read 
-the textbook. I also like the grading scheme. I recently read this book *The 
-Disposesed* where an anarchist physicist from a moon  goes on to lecture a 
-course at a "propertarian" (people who own property) university on another 
-planet. He's all like "What the hell are grades?" so that's how I feel now. I'm 
-TA'ing CON201 lab and may adopt a similar grading scheme as this course. 
+the textbook. I also like the grading scheme. I recently read this book 
+*the dispossessed* where an anarchist physicist from a moon goes on to lecture 
+a course at a "propertarian" (people who own property) university on the planet 
+his moon orbits. The anarchist is all like "What the hell are grades?". That's 
+how I feel about grades now.
 
-I'm trying to finish my masters degree this semester and will either be 
-defending late October or early November so I'll be pretty bogged down around 
+I'm trying to finish my masters degree this semester, and will either be 
+defending late October or early November. I'll be pretty bogged down around 
 that time.  
 
 I felt successful in mathematics when I did well in OCN 320 Advanced 
-Mathematics. It's completely different than the math departments advanced math 
+Mathematics. It's completely different from the math departments advanced math 
 class. OCN 320 has no proofs. It covers pretty broad topics from calculus to 
 linear algebra and differential equations. It's meant for SOEST graduate 
 students who are coming into the program without the proper undergraduate math 
-course load. I did get a good grade, but I was mostly happy about it being the 
-first higher level math course that I completed and understood all of what was 
-taught. 
+course prerequisites (such as myself). I did get a good grade, but I was mostly 
+happy about it being the first higher level math course that I completed and 
+understood all of what was taught. 
 
 I felt defeated in math the first semester I went back to school after taking a 
 hiatus. I registered for calculus II my first semester. At the time I was living 
 with my grandmother (nana) and commuting from southern Rhode Island to Boston by 
-train (the T). I remember having a breakdown on my way home. I distinctly 
-remember not being able to use my calculator. I'm really happy everything is on 
-computer's today, and I've become pretty proficient in R, so I will hopefully 
-not need one of those graphing calculators ever again. I ended up dropping 
-calculus II and to this day have not completed the course. 
+train (the T or commuter rail). I had a breakdown on the commuter rail on my way 
+home. I'm usually pretty collected, so it was concerning. I ended up dropping 
+calculus II, and to this day have not completed the course. 
 
 
 
