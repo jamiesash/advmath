@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Homework 2 - Classwork 1"
 output: pdf_document
 date: "2022-08-29"
 ---
