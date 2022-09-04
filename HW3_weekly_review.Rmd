@@ -1,0 +1,58 @@
+---
+title: "HW3 Week 2 Review"
+author: "Jamie Ash"
+output: pdf_document
+date: "2022-09-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I did learn something new in class this week. Set theory/set notation is all 
+new to me. Just by looking through the text book chapters I can tell that 
+everything will be new to me going forward as well. Also, I'll have to review 
+some linear algebra since we might be using vectors/matrices. 
+
+So far no confusion, but I was surprised how fast I forgot what we went over in 
+class. I went to do some of the HW assignments on set notation, and needed to 
+look through my notes to remember what the heck anything was, even though I 
+thought it was pretty introductory stuff. Guess that's what it's like when 
+things are new. I went the first two weeks trying not to google anything, I may 
+or may not keep this up. I feel like the process of arriving at the answer is 
+what's important in this class. 
+
+Overall, I'm still happy with the course. I like the balance of group activities
+and lectures. I also like how the textbook is written. It's very readable, and 
+not too focused on exercises. I think the free online, and cheap in paper model 
+is great as well. I'll try to read this one.  
+
+You said you went back to school to prove a theory (I think that's what you 
+said). What theory was that? I do not care if you address this in class or not.I 
+mean it would be nice but it is okay if you don't. I also probably don't know 
+enough math to understand the proof/theory. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
