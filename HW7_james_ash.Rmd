@@ -1,0 +1,133 @@
+---
+title: "HW 7: Jamie Ash"
+output: pdf_document
+date: "2022-10-09"
+---
+
+## Part 2: I hate to Contradict you...
+
+**Question 1:** $log_2(3)$ is irrational.
+
+*Proof:*  
+Suppose for the sake of contradiction that $log_s(3)$ is not irrational.   
+By definition, irrational numbers are $\mathbb{R} - \mathbb{Q}$.   
+So if $log_2(3)$ is not irrational, then it is rational.      
+Let $log_2(3) = x$ where $x \in \mathbb{Q}$.   
+With a little algebra, we get $3 = 2^x$.   
+Because $x \in \mathbb{Q}$, $x$ can be represented as $k/l$ where $k \in \mathbb{I}$ 
+and $l \in \mathbb{N}$.   
+So $3 = 2^x$ becomes $3 = 2^{\frac{k}{l}}$, where $k \neq 0$ because 
+$3 \neq 1$.  
+We can rearrange $3 = 2^{\frac{k}{l}}$ as $3^l = 2^k$.  
+But $3^l = 2^k$ is a contradiction, because $3^l$ is odd for all $l \in \mathbb{N}$, and $2^k$ is even for all $k \in \mathbb{I}, k \neq 0$.  
+Therefore $log_2(3)$ is irrational.
+
+**Question 6:** For integers *a*, *b* and *c*, if $a^2 + b^2 = c^2$ then *a* is 
+even or *b* is even.
+
+*Proof:*   
+Suppose for the sake of contradiction that $a^2 + b^2 = c^2$ and *a* is odd and 
+*b* is odd.   
+By the proof given in class, the product of any two odd numbers is odd and the 
+product of any two even numbers is even.    
+Let $a = 2k + 1$ and $b = 2l +1$  where $k, l \in \mathbb{I}$.  
+It follows that $a^2 = 2h + 1$ and $b^2 = 2m +1$ where $h, m \in \mathbb{I}$.   
+With substitution $a^2 + b^2 = c^2$ becomes $(2h + 1) + (2m + 1) = c^2$.   
+$(2h + 1) + (2m + 1) = c^2$ simplifies to $2h + 2m +2 = c^2$.      
+We proceed by addressing one of the two possible cases: $c^2$ is odd (case 1) or 
+$c^2$ is even (case 2).   
+
+*case 1:*   
+Suppose $c^2$ is odd. So $c^2 = 2p + 1$, where $p \in \mathbb{I}$.  
+Using substitution $2h + 2m +2 = 2p + 1$.   
+With some algebra...  
+$2h + 2m + 1 = 2p$  
+$2(h + m) + 1 = 2p$  
+$2t + 1 = 2p$  where $t \in \mathbb{I}$  
+
+But $2t + 1 = 2p$ is a contradiction because $2t + 1$ is odd and $2p$ is even.     
+Therefore if $a^2 + b^2 = c^2$, then *a* is even or *b* is even.   
+
+**Question 8:** There exists real numbers *x* and *y* so that 
+$(y + x)^2 = x^2 + y^2$.
+
+*Proof:*   
+Suppose for the sake of contradiction that for all real numbers *x* and *y*, 
+$(y + x)^2 \neq x^2 + y^2$.  
+Let $x$ and $y$ be the real number $0$, so that $x = 0$ and $y = 0$.  
+Through substitution $(y + x)^2 \neq x^2 + y^2$ becomes
+$(0+0)^2 \neq 0^2 + 0^2$.  
+Which simplifies to $0 \neq 0$, but this is a contradiction because $0 = 0$.  
+Therefore, there exists real numbers *x* and *y* so that 
+$(y + x)^2 = x^2 + y^2$. 
+
+\newpage
+
+## Part 1: Converse
+
+**Statement with a true converse:** If I have an odd number of cats, then I 
+don't have an even number of cats.
+
+**Statement with a false converse:** If I have three cats, then I have an odd 
+number of cats. 
+
+## Part 3: Weekly reflection
+
+Everything is good. I'm a little behind because I attended a conference in 
+Vietnam for a week. I'm a little less than a week behind on the homework as of 
+the writing of this reflection. I was able to keep up with the reading while I 
+was away.  
+
+The conference was called Ocean Optics XII. Most of the scientists there work 
+with ocean color satellites. Ocean color satellites are a classification of 
+satellites that measure the reflectance of sunlight form the ocean's surface. From
+ocean reflectance, a lot of the properties of the ocean water can be inferred, most
+notably the phyto-plankton* content of ocean water. I work with one of the 
+satellite products, CHL, and until recently had very little knowledge of how the 
+CHL satellite products is produced (I still mostly don't understand). Basically the
+satellite measures the oceans reflectance with a sensor similar to a common 
+camera, and from that back calculates what the light leaving the ocean would be
+after accounting for atmospheric effects. There's a good bit of math and hand 
+waiving involved. 
+
+I'm mentioning all this because my master's program is coming to a close, and I'm 
+thinking about pursuing a Phd. I wanted to do something more mathy, which is why
+I'm taking this course, and another math class. I feel like getting into ocean 
+optics could be a good path because it combines mathematics with oceanography. 
+A lot of the other students at their conference were in math, physics, or 
+engineering programs. 
+
+*phyto-plankton are plankton that photosynthesis. Plankton are any organism in
+the ocean who's location/movement is subject to or dominated by the ocean 
+currents. Phyto-plankton make up the base of the ocean's food web, and are 
+responsible for about half the oxygen in the atmosphere. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
