@@ -1,0 +1,87 @@
+---
+title: "Homework 8: James Ash"
+output: pdf_document
+---
+
+## Part 1: Toulmin Analysis
+
+*In your own words, what is meant in the paper by "data"? By "claim"? By "warrant"? By "backing"?*
+
+**Data** is a accepted truths, axioms, or statements that 
+have been previously proven to be true, like lemons. Similarly previews 
+statemnts of a proof that have been proven true and relevant fit this bill. 
+
+**Warrants** are miniature propositions, and are used to show
+a logical step from the data to the claim. Backings are additional warrants or 
+data that is provided if the a current warrant is not initially accepted as 
+true by the demographic. Backings can be provided preemptively. 
+
+A **claim** is a statement or proposition that is being presented as true. 
+Claims can become data for the preseding warrant.  
+
+*Pick two of the "Sample Proofs" on the worksheet attached, one that you think is 
+good and one that is bad. Do a Toulmin analysis on these two proofs, giving the 
+claim, data, and warrant for each step.*
+
+**Proposition 2, proof 2b, good proof:**  
+
+Step 1: 
+data: "Assume $\sqrt{15} \leq \sqrt{2} + \sqrt{6}$"  
+warrant: "Then... square both sides"
+claim: $\sqrt{15} \leq (\sqrt{2} + \sqrt{6})^2 = 8 + 2 \sqrt{12}$
+
+Step 2: 
+data: $\sqrt{15} \leq (\sqrt{2} + \sqrt{6})^2 = 8 + 2 \sqrt{12}$  
+warrant: Subtract 8 from both sides  
+claim: $7 \leq 2 \sqrt{12}$  
+
+Step 3: 
+data: $7 \leq 2 \sqrt{12}$  
+warrant: Square both sides
+claim: $49 < 48$  
+
+Step 3: 
+data: $49 < 48$   
+warrant: This is a contradiction...
+claim: ...so we must have $\sqrt{2} + \sqrt{6} < \sqrt{15}$
+
+I liked this proof because the data for each warrant was the claim from the 
+previous statement, so not much digging was needed. After doing the Toulmin 
+analysis I liked the proof a little less, only because the first set of data - 
+warrant - claim didn't have the same structure as the preseding data - warrant - 
+claim. That is, it had an equal sign in the statement rather than putting the 
+result in the next line below. 
+
+**Question 1, proof 1A, bad proof:**
+
+Step 1:
+data: no data  
+warent: $n = (2k) = (2k)^2 = 4k$  
+claim: so it’s divisible by 4  
+
+The proof does not provide sufficient data for the warrant $(2k)^2 = 4k$. A 
+definition of even numbers would be useful, and the assertion that $k \in Z$ is 
+needed. The major gap is that $k$ is undefined. Furthermore the claim "so it's
+divisible by 4" is ambiguous. It is difficult to discern what "it's" represents. 
+
+
+
+
+
+## Part 2: Combinatorial Proofs:
+
+*The classwork on Combinatorial Proofs is attached. Choose one question from 
+1 to 6 and carefully write up the proof.*
+
+
+## Part 3: Reflection
+
+
+
+
+
+
+
+
+
+
