@@ -1,0 +1,60 @@
+---
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Jamie Ash  
+2022-09-22  
+
+So far so good. I enjoy the structure of the class, am able to keep up with the 
+readings and the course work.     
+
+I just did really bad on my first calculus test of the semester. I felt like I 
+could have answered most of the questions well, but ran out of time. I'm really 
+good at making arithmetic mistakes that lead me down the wrong path for a very 
+long time. I'm still pretty rusty. So I appreciate that this class does not have 
+exams. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

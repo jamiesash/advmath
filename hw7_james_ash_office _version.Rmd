@@ -1,0 +1,102 @@
+---
+output: pdf_document
+---
+
+## Writting assignment 6
+
+**name:** Jamie Ash  
+**date:** 2022-09-22
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Tautology:** I will fly to Vietnam on Thursday, 2022-09-29, or I will not fly to Vietnam 
+next on Thursday, 2022-09-29. 
+
+This statement can be decomposed into two simpler statements.       
+$P$: I will fly to Vietnam on Thursday, 2022-09-29.  
+$Q$: I will not fly to Vietnam on Thursday, 2022-09-29.  
+
+When $Q$ is not $\sim P$...  
+
+```{r}
+P = c(TRUE, FALSE) #true and false values for P 
+Q = !P #not pee
+PoQ = P|Q #pee or q
+data.frame(P, Q, PoQ)
+```
+
+All possible outcomes of $P \cup Q$ are true, so my tautology is a tautology.   
+
+$$\\[0.25in]$$
+
+**Question 4:** If $4\nmid a^2$ the $a$ is odd.  
+
+The contrapositive of question 4 is as follows...   
+
+\begin{center}
+If $a$ is even, then $4 \mid a^2$.  
+\end{center}
+
+*Proof:* Assume $a$ is even. So $a = 2k$ for $k \in Z$. It follows that 
+$a^2 = 4(k)(k) = 4l$ for $l \in Z$. Thus the remainder of $4l/4$ is $l$ for 
+$l \in Z$. This means $a^2/4 = l$ for $l \in Z$. Therefore $4 \mid a^2$.   
+
+$$\\[0.25in]$$
+
+**Question 6:** (For $x \in R$) If $x^2+5x < 0$, then $x<0$.   
+
+The contrapositive of question 6 is as follows...   
+
+\begin{center}
+(For $x \in R$) If $x>0$, then $x^2 + 5x >0$.  
+\end{center}
+
+*Proof:* Assume $x>0$ and $x \in R$, then $x \in R^+$. Through the multiplicative 
+property of $R^+$ we find $x^2+5x=y$, for $y \in R^+$. Therefore $x^2+5x>0$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
