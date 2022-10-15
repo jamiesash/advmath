@@ -64,18 +64,56 @@ definition of even numbers would be useful, and the assertion that $k \in Z$ is
 needed. The major gap is that $k$ is undefined. Furthermore the claim "so it's
 divisible by 4" is ambiguous. It is difficult to discern what "it's" represents. 
 
-
-
-
+\newpage
 
 ## Part 2: Combinatorial Proofs:
 
-*The classwork on Combinatorial Proofs is attached. Choose one question from 
-1 to 6 and carefully write up the proof.*
+Disclaimer: I drew heavily from example 3.28 in the textbook to answer this 
+question. I really like this section but also find it very difficult, and would
+like to get better at doing combinatorial proofs.
 
+Question 4: 
+
+Show $\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}$
+
+$\binom{2n}{n}$ describes the number of unique permutations that can be created
+by drawing n elements from a set of length $2n$. Lets call this set with length 
+$2n$ set $D$.
+
+To count the total number of unique permutations in set $D$ is we can divide $D$ 
+into two equal parts $A$ and $B$, both of length $n$ so that $|A| = n$ and 
+$|B| = n$. In this way $D = A \cup B$ and $A \cap B = \varnothing$. 
+
+For any k with $0 \leq k \leq n$, because $\sum_{k=0}^{n}$, $n$ things from $D$ 
+can be taken by pulling $k$ things from $A$ and $n-k$ things from $B$ for a 
+total of $k+(n-k) = n$ things drawn. So that's $\binom{n}{k}$ from $A$ and 
+$\binom{n}{n-k}$ things from $B$. Using the multiplication principle we find 
+that's $\binom{n}{n-k}$ $\binom{n}{k}$ drawn in total from set $D$. 
+
+$k$ can be any number from $0 to n$ so to total number of ways to select $n$ 
+things from $D$ is the sum of all $k$ values as follows...
+
+
+$$\binom{n}{0}\binom{n}{n-0} + \binom{n}{1}\binom{n}{n-1} + \binom{n}{2}\binom{n}{n-2}+...+\binom{n}{n}\binom{n}{0}$$
+Since $\binom{n}{n-k} = \binom{n}{k}$ thgis expression becomes...
+
+$$\binom{n}{0}\binom{n}{0} + \binom{n}{1}\binom{n}{1} + \binom{n}{2}\binom{n}{2}+...+\binom{n}{n}\binom{n}{n}$$
+which can be expressed as...
+
+$\sum_{k=0}^{n} \binom{n}{k}^2$
+
+So I've shown two ways to count the unique permutations of set $D$ by drawing n 
+elements two different ways. First as $\sum_{k=0}^{n} \binom{n}{k}^2$ and then 
+as $\binom{2n}{n}$.
+
+Therefore $\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}$.
 
 ## Part 3: Reflection
 
+Finally caught up with all the class work and readings after taking the trip to 
+Vietnam.I find this section difficult, but would really like to improve. I like 
+statistics and combinitorics seems pretty relevant to that especially with the 
+binomial theorem involved. 
 
 
 
