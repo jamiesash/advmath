@@ -1,0 +1,82 @@
+---
+title: "Untitled"
+author: "Jamie Ash"
+date: "2022-10-20"
+output: pdf_document
+---
+
+---
+title: "Untitled"
+author: "Jamie Ash"
+date: "2022-10-20"
+output: pdf_document
+---
+
+# Part 1: Paradox
+
+I did not come up with this, but also didn't just google it. 
+
+An omnipotent god creates a stone that they can't lift. 
+What happens if they try to lift the stone?
+
+# Part 2: Sets and Congruents
+
+**Sets and power sets:**
+
+```{r, message = FALSE, warning=FALSE}
+f = function(set) { 
+  n = length(set)
+  masks = 2^(1:n-1)
+  lapply(1:2^n-1, function(u) set[bitwAnd(u, masks) != 0] )
+}
+#f(LETTERS[1:4])
+```
+
+**Computations:**
+
+*Question 3:* Find 3 different values of $x$, then describe all integers that 
+satisfy the congruence.   
+     1. $x \equiv 1 (\mod2)$   
+     2. $x \equiv 0 (\mod5)$  
+     3. $x \equiv 3 (\mod10)$   
+
+**Proofs:**
+
+*Question 5:* If n is odd, then $8 | (n^2-1)$. 
+
+# Part 3: Reflection
+
+I woke up in the middle of the night, and could not fall back asleep. I kept 
+thinking "what am I doing with my life".  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
