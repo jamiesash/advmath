@@ -1,0 +1,161 @@
+---
+title: "Homework: Set proofs"
+output: pdf_document
+date: "2022-10-22"
+---
+
+# Part 1: 
+
+# Part 2: Set Proofs
+
+**Sets and power sets:**
+
+Question 2: Remember that for a set $A$, the power set of $A$ is the set of all 
+subsets of $A$. We write $P(A)$.
+
+(a) Prove that if $A \subseteq B$ then $P(A) \subseteq P(B)$.
+
+*Proof* 
+suppose $A \subseteq B$
+
+therefore $P(A) \subseteq P(B)$
+
+(b) Prove that in general $P(A) \cup P(B) \neq P(A \cup B)$.
+
+*Proof* 
+
+(c) Can you find sets $A$ and $B$ where it is true that $P(A) \cup P(B) = P(A\cup B)$?
+Answer: Where sets $A$ and $B$ contain only the empty set.
+
+
+(d) Prove or disprove: $P(A) \cap P(B) = P(A \cap B)$ for all sets $A$ and $B$.
+
+**Computation:** 
+
+Question 4: Find all values of $n$ that make the congruence true.
+(a) $5 \equiv 25 (\mod n)$ answer: n is any of $\{2, 4, 5, 10\}$
+(b) $20 \equiv 0 (\mod n)$ answer: n is any of $\{2, 4, 5, 10\}$
+(c) $37 \equiv 1 (\mod n)$ answer: n is any of $\{2, 4, 6, 12, 18 \}$
+
+**Proofs:** 
+
+Question 5: If n is odd, then $8|(n^2-1)$.
+
+*Proof* We proceed by inference and cases. 
+
+By the definition of divisibility, $8|(n^2-1)$ implies $8l = n^2-1$ 
+where $l \in \mathbb{Z}$. By the definition of odd numbers, we have n is 
+$2k +1 \in Z$. We proceed with two cases, first where n is any positive odd 
+number, and then where n is any negative odd number.
+
+(Base step) Consider the series of positive odd numbers, $H$, ($k \in N ,0:2k+1$) 
+that is ordered from smallest to largest (not sure how to use series/set 
+notation to denote order). Now consider $m \in H$, where first possible value of
+$m$ is 1, corresponding to the first possible value of k being 0. 
+Through substitution we get...
+
+$$
+8l = m^2-1 \\
+8l = 1^2-1 \\
+8l = 0 \\
+l = 0 \\
+or \\
+8l = (2k +1)^2-1 \\
+8l = (2(0)+1)^2-1 \\
+8l = (1)^2-1 \\
+8l = 0 \\
+l = 0
+$$
+(intuitive step) Suppose $8|(n^2-1)$ where $n$ is any positive odd number.  
+By the definition of divisibiklity and odd numbers we have...
+$$
+\begin{equation} 
+\begin{split}
+8l = (2k +1)^2-1 & \text{ definition of divisibility } \\
+8l + (8k+8) = (2k +1)^2-1 + (8k+8) & \text{ add (8k+8) to both sides} \\
+8l + 8k+8 = (2k + 3)^2-1 & \text{ factor right side} \\
+8(l + k + 1) = (2k + 3)^2-1 & \text{ pull out the 8} \\
+8p = (2k + 3)^2-1 & \text{ addition of intigers l + k + 1 = p where } p \in \mathbb{Z} \\
+\end{split}
+\end{equation} 
+$$
+
+therefore $8|(2l+3)^2-1$ or $8|(n+2)^2-1$ i.e. $S_{k+1}$. 
+
+For the case where $n$ is all negative odd numbers, we use a the same proof 
+because $n^2$ where $n$ is any negative odd number results in a equivalent set 
+as $n^2$ for any positive odd number. 
+
+So $S_k \implies S_{k+1}$. Through inference if $n$ is odd, then $8|(n^2-1)$.
+
+\newpage 
+
+# Part 3: Reflection
+
+Two nights ago I had a dream where I was walking on a sidewalk along a 
+suburban street. It was night time and there were a few restaurants on the other 
+side of the way. The row of restaurants ended at an intersection, beyond 
+which was obscured by a canopy of large overhanging trees. From the adjacent 
+corner of the intersection a cat ran across the street towards me, and as the 
+cat approached the sidewalk that I was on, it formed into a human figure. I felt
+threatened by the once cat now human shape. 
+
+At this point I became aware of someone walking alongside me. I had the vague 
+sense that they were a friend, a good friend, but the kind of good friend whose 
+friendship forms over a year or two. I took a step to place myself between 
+the figure and this good friend. The figure came closer, and I intently stared 
+at it's form as it moved. Either I could not see it's form clearly, or the 
+memory of the figure's appearance is lost with the rest of my forgotten dreams. 
+I'm not sure. I do know that the figure was ragged and grey, possibly without a
+face. 
+
+My fear slowly pulled me into the waking world, and I gradually became
+aware of the surroundings in my room. The figure was now 
+silhouetted against the curtain at the foot of my bed. I couldn't move and 
+struggled to speak. This was the same felling you get in a dream when you 
+attempt to run but can't go faster than a walk. Eventually I let out a yell... 
+"Your sandwiches suck!!" which jolted me into full consciousness and mobility. 
+One of the restaurants across the street, where the cat originated, was a 
+sandwich shop.   
+
+Although I yelled something dumb, and it's kind of funny, I can't stop wondering 
+about the timing of this dream. That same night I had gone to have dinner with a
+few people at my friend Petra's house. My other friend Bailey, who used to live
+in that same house, and happens to be very "in tune" with spirits, claims there 
+is both a demon in the garage, and a ghost cat that wanders the premise. Maybe 
+the cat and demon are one in the same?
+
+At the dinner party Petra and I poked fun of the garage demon (at least the idea
+of a garage demon), and mildly insinuated that Bailey is off her rocker. Maybe 
+this upset the cat demon, and it followed me home. In which case this 
+poltergeist is contagious, and all of the Math 321 class has now been exposed. 
+Happy Halloween. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
