@@ -19,7 +19,7 @@ for $\{ \mathbb{N}:2^n \}$ which looks like $\{2, 4, 8, 16...\}$ I realized you
 can get all even numbers between $n$ and $n+1$ by raising all possible subsets of 
 $1$ to $n$ by two and summing them the individual subsets. Then the odd numbers 
 can be found by adding $2^0$ to the set of even numbers, and since $2^0$ is not
-in the set $\{ \mathbb{N}:2^n \}$ it does not break the rules of the question. 
+in the set $\{ \mathbb{N}:2^n \}$ it does not break the rules of the question.  
 
 ```{r}
 raise = function(x){
@@ -29,7 +29,7 @@ raise = function(x){
 # first few natural numbers
 n = 1:2
 # produce the power set of n
-sets = powerSetCond(n, rev=TRUE)
+sets = powerSet(n, rev=TRUE)
 # raise by 2 and sum each subset of n (in the powerset)
 evens = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
@@ -39,6 +39,9 @@ sort(evens)
 # retrieveing all odd numbers
 sort(evens + 2^0)
 ```
+0 and 1 being the empty set sum of the empty set and the sum of the empty set 
+plus $2^0$.
+
 I then realized that $\mathbb{N}$ can be found by individualy summing the subsets 
 within the power set of $\{n \in \mathbb{N}:2^n \}$ and also including 0. This is 
 the same as adding $2^0$ to $\{n \in \mathbb{N}:2^n \}$
@@ -47,7 +50,7 @@ the same as adding $2^0$ to $\{n \in \mathbb{N}:2^n \}$
 # first few positive integers
 z = 0:3
 # produce the power set of z
-sets = powerSetCond(z, rev=TRUE)
+sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of z (in the powerset)
 nat_nums = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
@@ -63,7 +66,7 @@ I start getting the set of real numbers, $\mathbb{R}$.
 # first few natural numbers
 z = -1:1
 # produce the power set of n
-sets = powerSetCond(z, rev=TRUE)
+sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of n (in the powerset)
 nat_nums = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
@@ -78,7 +81,7 @@ $z \in Z$ where $-2 \le z \le1$ we get...
 # first few natural numbers
 z = -2:1
 # produce the power set of n
-sets = powerSetCond(z, rev=TRUE)
+sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of n (in the powerset)
 nat_nums = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
@@ -91,7 +94,7 @@ adding one more negative integer, $-3 \le z \le1$ we get...
 # first few natural numbers
 z = -3:1
 # produce the power set of n
-sets = powerSetCond(z, rev=TRUE)
+sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of n (in the powerset)
 nat_nums = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
