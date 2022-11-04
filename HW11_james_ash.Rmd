@@ -1,0 +1,49 @@
+---
+title: "Untitled"
+author: "Jamie Ash"
+date: "2022-11-04"
+output: pdf_document
+---
+
+*Question 4.* 
+
+**Rewriting question.** 
+for any $n \in \mathbb{N}$ we can write write it as $n = 2^{x_1}+2^{x_2}+...2^{x_i}$ 
+where $x_0$ to $x_{i}$ are elements of the set $x \in P(\mathbb{N})$. 
+
+(Base case) Showing 1 to 7 can be writen as $2^{x_1}+2^{x_2}+...2^{x_i}$. 
+```{r, eval = FALSE}
+raise = function(x){
+  sum(2^x) 
+}
+
+# first few natural numbers
+n = 0:2
+# produce the power set of n
+sets = powerSet(n, rev=TRUE)
+# raise by 2 and sum each subset of n (in the powerset)
+u = lapply(sets, raise)
+# Just changing the data class to vector (from a list), and sriting them 
+u = unlist(u)
+sort(u)
+```
+
+Let $X$ be the set $\{x \in P(\mathbb{N});2^{x_1}+2^{x_2}+...2^{x_i} \}$. 
+Suppose for the sake of argument that there is some $n \in \mathbb{N}$ where
+$n \notin X$.  
+
+Let $k$ be this number, and $t$ be the greatest factor of two that is less 
+than $k$, and $\ell$ be the smallest factor of two greater than $k$. Such that
+$t < k < \ell$ and $2t = \ell$.   
+
+Then $k - t = m$ and $k = m + t$ where $m \in \mathbb{N}$, and $m < t < k$.  
+Since $m < t < k$ and $k$ is the smallest number not in $X$, it follows that 
+$t,m \in X$.  
+
+Similarly, because $t > m$, then $t + m \in X$. 
+Note, if it where the case where $m > t$ then $\ell$ would be the greatest 
+factor of two that is less than $k$, not $t$.    
+So $t + m = k$ and $t + m \in X$ but $k \notin X$. This is a contradiction.   
+Therefore, $\forall n \in X$.   
+
+

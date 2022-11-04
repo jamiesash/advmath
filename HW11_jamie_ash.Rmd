@@ -11,7 +11,7 @@ library(rje)
 ```
 
 To answer this question I felt like I needed an equation that describes how each
-natural number is produced. I began by handwriting out by calculating the 1 
+natural number is produced. I began by handwriting out the calculation for the 1 
 through 10 of $\in N$ to see if there was a pattern. I realized that the even 
 numbers where reproduced by summing all possible combinations of $2^n$
 
@@ -24,7 +24,7 @@ in the set $\{ \mathbb{N}:2^n \}$ it does not break the rules of the question.
 ```{r}
 raise = function(x){
   sum(2^x) 
-  }
+}
 
 # first few natural numbers
 n = 1:2
@@ -34,21 +34,22 @@ sets = powerSet(n, rev=TRUE)
 evens = lapply(sets, raise)
 # Just changing the data class to vector (from a list), and sriting them 
 evens = unlist(evens)
+odds = evens + 2^0
+evens_and_odds = c(evens, odds)
+
 sort(evens)
-
-# retrieveing all odd numbers
-sort(evens + 2^0)
+sort(odds)
+sort(evens_and_odds)
 ```
-0 and 1 being the empty set sum of the empty set and the sum of the empty set 
-plus $2^0$.
-
-I then realized that $\mathbb{N}$ can be found by individualy summing the subsets 
-within the power set of $\{n \in \mathbb{N}:2^n \}$ and also including 0. This is 
-the same as adding $2^0$ to $\{n \in \mathbb{N}:2^n \}$
+We can similarly retrieve the odd numbers by including 0 in the set of $n$. In 
+this case that would be `n = 0:2`. By including 0 in $n$, the carnality of 
+$P(n)$ doubles because one more element is added to $n$, and the carnality 
+of a power set is $|P(n)| = 2^{|n|}$. This is not much different from combining 
+even numbers with the odd numbers as I did above (the set doubles in length). 
 
 ```{r}
 # first few positive integers
-z = 0:3
+z = 0:2
 # produce the power set of z
 sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of z (in the powerset)
@@ -57,14 +58,14 @@ nat_nums = lapply(sets, raise)
 nat_nums = unlist(nat_nums)
 sort(nat_nums)
 ```
-Finally, if I go into the negative and sum the first few smallest (and largest 
-negative) values in $\mathbb{Z}$, this would be like adding fractions to the 
-set of $\{n \in \mathbb{N}:2^n \}$. Like $\{z \in \mathbb{Z}:2^z \}$. I realized
-I start getting the set of real numbers, $\mathbb{R}$. 
+Finally, if I go into the negatives and sum the "first" few values in 
+$\mathbb{Z}$, this would be like adding fractions to the set of 
+$\{n \in \mathbb{N}:2^n \}$. Like $\{z \in \mathbb{Z}:2^z \}$. I realized I 
+start getting the set of real numbers, $\mathbb{R}$. 
 
 ```{r}
 # first few natural numbers
-z = -1:1
+z = -1:2
 # produce the power set of n
 sets = powerSet(z, rev=TRUE)
 # raise by 2 and sum each subset of n (in the powerset)
@@ -102,29 +103,64 @@ nat_nums = unlist(nat_nums)
 sort(nat_nums)
 ```
 So then, is $\mathbb{R^+}$ the individual sums of the subsets of $P(\mathbb{Z})$ 
-raised by 2? This also makes me think that $\mathbb{R^+}$ can be achieved 
-by individualy summing the subsets in the power set of rational numbers. I did
-not complete a proof for power sets. If all this is true maybe it could be a fun
-way to get credit for writing a proof with power sets. Infinity gets involved 
-though so maybe it is just false. 
+raised by 2? I did not complete a proof for power sets. If all this is true 
+maybe it could be a fun way to get credit for writing a proof with power sets. 
+Infinity gets involved though so maybe it is just false. 
 
 Anyway, this is not what the question asked, but I spent too long thinking 
 about it, so I have copied an answer from the internet for the sake of time. 
 
+# ------------------------------------------------------------------------------
+*Question 4.* 
+
+**Rewrititng question.** 
+for any $n \in \mathbb{N}$ we can write write it as $n = 2^{x_1}+2^{x_2}+...2^{x_i}$ 
+where $x_0$ to $x_{i}$ are elements of the set $x \in P(\mathbb{N})$. 
+
+(Base case) Showing 1 to 7 can be writen as $2^{x_1}+2^{x_2}+...2^{x_i}$. 
+```{r}
+raise = function(x){
+  sum(2^x) 
+}
+
+# first few natural numbers
+n = 0:2
+# produce the power set of n
+sets = powerSet(n, rev=TRUE)
+# raise by 2 and sum each subset of n (in the powerset)
+u = lapply(sets, raise)
+# Just changing the data class to vector (from a list), and sriting them 
+u = unlist(u)
+sort(u)
+```
+
+Let $X$ be the set $\{x \in P(\mathbb{N});2^{x_1}+2^{x_2}+...2^{x_i} \}$.   
+Suppose for the sake of argument that there is some $n \in \mathbb{N}$ where
+$n \notin X$.  
+
+Let $k$ be this number, and $t$ be the greatest factor of two that is less 
+than $k$, and $\ell$ be the smallest factor of two greater than $k$. Such that
+$t < k < \ell$ and $2t = \ell$.   
+
+Then $k - t = m$ and $k = m + t$ where $m \in \mathbb{N}$, and $m < t < k$.
+Since $m < t < k$ and $k$ is the smallest number not in $X$, it follows that 
+$t,m \in X$.  
+
+Similarly, because $t > m$, then $t + m \in X$. \
+Note, if $m > t$ then $\ell$ would be the greatest factor of two that is less 
+than $k$, not $t$.    
+So $t + m = k$ and $t + m \in X$ but $k \notin X$. This is a contradiction.   
+Therefore there all $n \in \mathbb{N}$ are in $X$.   
 
 
 
 
+for any $n \in \mathbb{N}$ we can write write it as $n = 2^{x_1}+2^{x_2}+...2^{x_i}$ 
+where $x_0$ to $x_{i}$ are elements of the set $x \in P(\mathbb{N})$.
 
-
-
-
-
-
-
-
-
-
+Let the function $f(x)$ be $f(x) = 2^{x_1}+2^{x_2}+...2^{x_i}$. This is a binary 
+function and preserves uniqueness. So that if $x_a \neq x_b$ where $x_a$ and  
+$x_b$ $f(x_a)$
 
 
 
