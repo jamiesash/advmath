@@ -1,6 +1,5 @@
 ---
-title: "Untitled"
-author: "Jamie Ash"
+title: "Homework 11"
 date: "2022-11-04"
 output: pdf_document
 ---
@@ -9,6 +8,74 @@ output: pdf_document
 $$
 \frac{1}{1 \times 2} + \frac{1}{2 \times 3} + ... + \frac{1}{n(n+1)} = \frac{n}{n+1}
 $$
+
+*Proof:* We proceed by induction. 
+
+(Base case) For the smallest values of $n \in \mathbb{N}$ we begin with 1, and 
+2...
+
+$$
+\begin{aligned}
+\frac{1}{1 \times 2} = \frac{1}{1+1} \\
+\frac{1}{2} = \frac{1}{2} \\
+\end{aligned}
+$$
+Looks good. Now for n = 2
+
+$$
+\begin{aligned}
+\frac{1}{1 \times 2} + \frac{1}{2 \times 3} = \frac{2}{2+1} \\
+\frac{1}{2} + \frac{1}{6} = \frac{2}{3} \\
+\frac{3}{6} + \frac{1}{6} = \frac{2}{3} \\
+\frac{4}{6} = \frac{2}{3} \\
+\frac{2}{3} = \frac{2}{3} \\
+\end{aligned}
+$$
+Solid. Moving on. 
+
+(Inductive step) Suppose $\sum^{k}_{i=1} \frac{1}{i(i + 1)} = \frac{k}{k+1}$ for
+all $k \in \mathbb{N}$ and let $k > 2$. So then...
+$$
+\sum^{k}_{i=1} \frac{1}{i(i + 1)}  = \frac{k}{k+1}
+$$
+We add $\frac{1}{(k+1)(k+2)}$ to both sides.
+$$
+\frac{1}{(k+1)(k+2)} + \sum^{k}_{i=1} \frac{1}{i(i + 1)}  = \frac{k}{k+1} + \frac{1}{(k+1)(k+2)}
+$$
+The sum symbol eats the $\frac{1}{(k+1)(k+2)}$
+$$
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k}{k+1} + \frac{1}{(k+1)(k+2)}
+$$
+find a common denominator for the right side.
+$$
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k(k+2)}{(k+1)(k+2)} + \frac{1}{(k+1)(k+2)}
+$$
+combine fractions.
+$$
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k(k+2)+1}{(k+1)(k+2)}
+$$
+simplify...
+$$
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k + 1}{(k+2)}
+$$
+show right side as $k+1$..
+$$
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k + 1}{((k+1)+1)}
+$$
+Therefor $k \implies k+1$ summarized as...
+$$
+\sum^{k}_{i=1} \frac{1}{i(i + 1)} = \frac{k}{k+1} 
+\implies
+\sum^{k+1}_{i=1} \frac{1}{i(i + 1)}  = \frac{k + 1}{((k+1)+1)}
+$$ 
+So then through the inductive process we have shown that for all $n \in \mathbb{N}$
+
+$$
+\frac{1}{1 \times 2} + \frac{1}{2 \times 3} + ... + \frac{1}{n(n+1)} = \frac{n}{n+1}
+$$
+
+\newpage
+
 **Question 3:** In a chess tournament of n players, each pair of players plays 
 exactly one match against each other. There are no draws. Prove that the 
 players can be arranged in an order $p_1, p_2...p_n$ such that $p_i$ defeats 
@@ -40,11 +107,11 @@ $p_1, p_2...p_\ell$ standing.
 For each check of player $x$ to against player $p_i$ across players in $\ell$, 
 there are two possible outcomes... 
 
-Case 1: Player $x$ lost to a player $p_i$. Place player $x$ to the right of 
+Case 1: Player $x$ lost to player $p_i$. Place player $x$ to the right of 
 player $p_i$. The standing will maintains it's $p_i$ defeated $p_i + 1$ order. 
 
 Case 2: Player $x$ won against player $p_i$. Now repeat this process for player 
-$p_{i-1}$ ie. move to the left in the $p_1, p_2...p_\ell$. 
+$p_{i-1}$. Move to the left in the $p_1, p_2...p_\ell$ standing, and repeat. 
 
 Now again, there are two possible outcomes to this process...
 
@@ -59,12 +126,14 @@ maintained.
 
 Now, in all possible cases of adding the player $x$ back to pool $\ell$, so 
 that $\ell = k$, we have arranged $k$ in the $p_1, p_2...p_\ell$ order in which 
-player  $p_i$ has defeated player $p_i + 1$. But $k$ cannot be arranged in such
-a way. This is a contradiction. Therefor there is no smallest player pool $k$
-that can't be arranged in such a way. It must be that we can arrange any player 
-pool of size $n \in \mathbb{N}$ in an order $p_1, p_2...p_n$ such that $p_i$ 
-defeats $p_i + 1$ for all $i = 1, 2,...n-1$
+player  $p_i$ has defeated player $p_i + 1$. But $k$ is the smallest sized 
+player pool that cannot be arranged in such a way. This is a contradiction. 
+Therefor there is no smallest player pool $k$ that can't be arranged in such a 
+way. It must be that we can arrange any player pool of size $n \in \mathbb{N}$ 
+in an order $p_1, p_2...p_n$ such that $p_i$ defeats $p_i + 1$ for all 
+$i = 1, 2,...n-1$
 
+\newpage
 
 **Question 4.** **Rewriting question.** 
 for any $n \in \mathbb{N}$ we can write write it as $n = 2^{x_1}+2^{x_2}+...2^{x_i}$ 
