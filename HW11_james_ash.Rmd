@@ -7,26 +7,21 @@ output: pdf_document
 
 **Question 1:** For all $n \in \mathbb{N}$, show that...
 $$
-
+\frac{1}{1 \times 2} + \frac{1}{2 \times 3} + ... + \frac{1}{n(n+1)} = \frac{n}{n+1}
 $$
+**Question 3:** In a chess tournament of n players, each pair of players plays 
+exactly one match against each other. There are no draws. Prove that the 
+players can be arranged in an order $p_1, p_2...p_n$ such that $p_i$ defeats 
+$p_i + 1$ for all $i = 1, 2,...n-1$
 
-**Question 3:** In a chess tourniment of n players, each pair of players plays 
-excactly one match against each other. There are no draws. Prove that the 
-players can be arranged in an order $P_1, P_2...P_n$ such that $P_i$ defeats 
-$P_i + 1$ for all $i = 1, 2,...n-1$
-
-*Prrof:* We proceed with strong induction. 
+*Proof:* We proceed with strong induction. 
 
 (Base Cases) For n total players 0 to 1 the case is null. For 2 players arrange
 them as $p_1, p_2$ where $p_1$ defeated $p_2$ in a chess match.
 
-(Inductive step) Suppose for some tournament with $k$ players that we can arrange
-them in an order $p_1, p_2...p_k$ such that $p_i$ defeats $p_i + 1$ for all 
-$i = 1, 2,...k-1$. 
-
-Now suppose for the sake of contradiction that there is some smallest tournament 
-size where we can not arrange the players in such a way. Let this tournament be 
-of size $k$. 
+(Inductive step) Suppose for the sake of contradiction that there is some 
+smallest tournament of size $k$ where we can not arrange the players in an order 
+$p_1, p_2...p_k$ such that $p_i$ defeats $p_i + 1$ for all $i = 1, 2,...k-1$
 
 Remove one player from this player pool, while keeping all win/loss results of 
 the other players the same. Let this new pool be player pool $\ell$. Pool $\ell$ 
@@ -37,11 +32,13 @@ such that $p_i$ defeats $p_i + 1$ for all $i = 1, 2,...\ell-1$.
 
 Arrange $\ell$ in this a way, then add a new player to the pool. Let this new 
 player be player $x$. Allow player $x$ to have the same win/loss results as the 
-player original removed from $k$, so $\ell$ is now equal to $k$. Then 
-sequentially check if this player has defeated each player in $\ell$, right to 
-left, from player $p_\ell$ to player $p_1$ in the $p_1, p_2...p_\ell$ standing. 
+player originaly removed from $k$. Player pool $\ell$ is now equal to player 
+pool $k$. Then sequentially check if this player has defeated each player in 
+$\ell$, right to left, from player $p_\ell$ to player $p_1$ in the 
+$p_1, p_2...p_\ell$ standing. 
 
-For each check of player $x$ to player $p_i$ there are two possible outcomes... 
+For each check of player $x$ to against player $p_i$ across players in $\ell$, 
+there are two possible outcomes... 
 
 Case 1: Player $x$ lost to a player $p_i$. Place player $x$ to the right of 
 player $p_i$. The standing will maintains it's $p_i$ defeated $p_i + 1$ order. 
@@ -54,10 +51,10 @@ Now again, there are two possible outcomes to this process...
 Case 1: Player $x$ lost to someone, and will be placed in the standing as 
 described. The standing will maintain it's $p_i$ defeats $p_i + 1$ order.
 
-Case 2: Player $x$ has has not lost to anyone (all wins). 
+Case 2: Player $x$ has not lost to anyone (all wins). 
 
 If case 2 occurs, then we can place player $x$ at the front of the 
-$p_1, p_2...p_\ell$ standing so that the $p_i$ defeated $p_i + 1$ order will be 
+$p_1, p_2...p_\ell$ standing, so that the $p_i$ defeated $p_i + 1$ order will be 
 maintained. 
 
 Now, in all possible cases of adding the player $x$ back to pool $\ell$, so 
