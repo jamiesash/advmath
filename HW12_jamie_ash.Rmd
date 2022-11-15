@@ -1,0 +1,258 @@
+---
+output: pdf_document
+---
+
+# HW12 Jamie Ash
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Question 1.** Define a relation on $\mathbb{N}$ by $\mathbb{W}=\{(m,n) \in \mathbb{N}:2m < n < 3m+6 \}$
+
+(a) Which of the following pairs are in $\mathbb{W}$ and which are not? Justify your answers
+$$ 
+\{(2, 6), (5, 21), (7, 31), (3, 5), (4, 16) \}
+$$
+
+*Answer:* The pairs (2, 6), and (4, 16) are in $\mathbb{W}$. The pairs 
+(5, 21), (7, 31), and (3, 5) are not in $\mathbb{W}$.
+
+For (2, 6)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(2) < 6 < 3(2) + 6 \\
+4 < 6 < 12 \\
+TRUE
+\end{aligned}
+$$
+For (4, 16)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(4) < 16 < 3(4) + 6 \\
+8 < 16 < 18 \\
+TRUE
+\end{aligned}
+$$
+
+For (5, 21)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(5) < 21 < 3(5) + 6 \\
+10 < 21 < 21 \\
+FALSE
+\end{aligned}
+$$
+
+For (7, 31)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(7) < 31 < 3(7)+6 \\
+14 < 31 < 27 \\
+FALSE
+\end{aligned}
+$$
+
+For (3, 5)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(3) < 5 < 3(3) + 6 \\
+6 < 5 < 15 \\
+FALSE
+\end{aligned}
+$$
+
+(b) Give two more ordered pairs of natural numbers that are in $\mathbb{W}$ and two 
+that are not. Be sure to justify your answers.  
+
+*Answer:* The pairs (2, 5) and (1, 3) are in $\mathbb{W}$. The pairs (1, 10) and 
+(2, 3) are not in $\mathbb{W}$. 
+
+For (2, 5)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(2) < 5 < 3(2) + 6 \\
+4 < 5 < 12 \\
+TRUE
+\end{aligned}
+$$
+For (1, 3)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(1) < 3 < 3(1) + 6 \\
+2 < 3 < 9 \\
+TRUE
+\end{aligned}
+$$
+For (1, 10)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(1) < 10 < 3(1) + 6 \\
+2 < 10 < 9 \\
+FALSE
+\end{aligned}
+$$
+
+For (2, 3)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(2) < 3 < 3(2) + 6 \\
+4 < 3 < 12 \\
+FALSE
+\end{aligned}
+$$
+(c) Explain why $\mathbb{W}$ is not an equivalence relation.   
+
+*Answer:* $\mathbb{W}$ is not an equivalent relation because $\mathbb{W}=\{(m,n) \in \mathbb{N}:2m < n < 3m+6 \}$ is not reflexive.
+That is $m \mathbb{W} n$ does not imply $n \mathbb{W} m$. A relation must be 
+reflexive, symmetric and transitive to be an equivalence relationship. Here's an
+example of an ordered pair in $\mathbb{W}$ that is not reflexive.
+
+For (1, 3)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(1) < 3 < 3(1) + 6 \\ 
+2 < 3 < 9 \\
+TRUE
+\end{aligned}
+$$
+
+For (3, 1)...
+$$
+\begin{aligned}
+2m < n < 3m+6 \\
+2(3) < 1 < 3(3) + 6 \\ 
+6 < 1 < 15 \\
+FALSE
+\end{aligned}
+$$
+
+\newpage 
+
+**Question 2.** Write up a careful solution:   
+
+(a) Let $\mathbb{R}$ be the empty set relation on the integers. That is, $R = \emptyset$
+and for all $a,b \in \mathbb{Z}$ we have $(a, b) \in R$. Prove or disprove: $R$ is an
+equivalence relation.   
+
+*Answer:* $\mathbb{R}$ is not an equivalent relation because it is not symmetric. A 
+relation is equivalent if it is symmetric, transitive, and reflexive. The 
+relation $\mathbb{R}$ happens to be transitive and symmetric because transitive 
+and symmetric use conditional statements in their definition. That is, a relation 
+is symmetric if, $\forall x, y \in \mathbb{Z}$, 
+$x \mathbb{R}y \implies y \mathbb{R}x$. Similarly, a relation is transitive if 
+$\forall x, y,z \in \mathbb{Z}$, $x \mathbb{R}y \cup x \mathbb{R}y \implies y \mathbb{R}x$. 
+For the relation of the empty set, there exists no $x \mathbb{R}y$ so the 
+statements $x \mathbb{R}y \cup x \mathbb{R}y \implies y \mathbb{R}x$ and 
+$x \mathbb{R}y \implies y \mathbb{R}x$ are always true. 
+
+For the relation $\mathbb{R}$ to be reflexive it must satisfy 
+$\forall x \in \mathbb{Z}$, $x \mathbb{R}x$. Because there does exists 
+$x \in \mathbb{Z}$, but there does not exist $x \in  \mathbb{R}$, then 
+$x \mathbb{R} x$ does not hold. Therefore $R$ is not a reflexive relation, and 
+consequently not an equivalence relation. 
+
+\newpage 
+
+**Question 3.** Suppose that $\mathbb{R}$ is an equivalence relation on a set $S$, and let 
+$a, b \ \in \mathbb{S}$. Let $[a]$ represent the equivalence class of $a$, the set 
+of elements of S that are equivalent to $a$. In set notation. 
+$$
+[a] = \{ x \in S:x \sim a\}
+$$
+Prove the following:  
+
+(a) If $a \sim b$ then $[a] = [b]$.    
+
+*Proof:* I'm changing the $\sim$ to $\mathbb{R}$.   
+
+Suppose $a R b$...
+
+Because $R$ is an equivalence relationship on $S$, and $a, b \in S$, then there 
+exists some equivalence class $[a]$ and $[b]$.  
+
+By definition the equivalence class $[b]$ is $\{x \in S: x R b\}$ and 
+$[a]$ is $\{x \in S: x R a\}$. Because $[a] = [b]$ then $\{x \in S: x R b\}$ 
+= $\{x \in S: x R a\}$. But $a \in S$ so then $a R b$ and $b \in S$ so $b R a$.  
+
+We will show $[a] \subset [b]$ and $[b] \subset [a]$. To show $[a] \subset [b]$
+suppose $c \in [a]$. As $c \in [a] = \{x \in S: x R a\}$ we find $c R a$. We've shown 
+$c R a$ and $a R b$ so by the transitive property of $R$ we have $c R b$. This implies
+$c \in \{x \in S: x R b\} = [b]$. So $c \in [a] \implies c \in [b]$, so $[a] \subset [b]$.  
+ 
+We do nearly the same to show $[b] \subset [a]$.   
+
+So $[b] \subset [a]$ and $[a] \subset [b]$, therefore $[a] = [b]$.  
+
+(b) If $a \nsim b$ then $[a] \neq [b]$.  
+
+*Proof:* We proceed by the contrapositive case. That is, if $[a] = [b]$ then 
+$a \sim b$.
+
+Suppose $[a] = [b]$...  
+Show $[a] = [b]$ implies symmetric  
+Show $[a] = [b]$ implies reflexive  
+Show $[a] = [b]$ implies transative.  
+
+Therefor $a \sim b$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
