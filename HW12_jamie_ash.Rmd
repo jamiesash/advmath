@@ -202,7 +202,7 @@ $a \sim b$.
 Suppose $[a] = [b]$...  
 Show $[a] = [b]$ implies symmetric  
 Show $[a] = [b]$ implies reflexive  
-Show $[a] = [b]$ implies transative.  
+Show $[a] = [b]$ implies transitive.  
 
 Therefor $a \sim b$
 
