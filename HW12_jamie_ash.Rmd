@@ -174,41 +174,31 @@ Prove the following:
 
 (a) If $a \sim b$ then $[a] = [b]$.    
 
-*Proof:* I'm changing the $\sim$ to $\mathbb{R}$.   
-
-Suppose $a R b$...
-
-Because $R$ is an equivalence relationship on $S$, and $a, b \in S$, then there 
-exists some equivalence class $[a]$ and $[b]$.  
-
-By definition the equivalence class $[b]$ is $\{x \in S: x R b\}$ and 
-$[a]$ is $\{x \in S: x R a\}$. Because $[a] = [b]$ then $\{x \in S: x R b\}$ 
-= $\{x \in S: x R a\}$. But $a \in S$ so then $a R b$ and $b \in S$ so $b R a$.  
-
-We will show $[a] \subset [b]$ and $[b] \subset [a]$. To show $[a] \subset [b]$
-suppose $c \in [a]$. As $c \in [a] = \{x \in S: x R a\}$ we find $c R a$. We've shown 
-$c R a$ and $a R b$ so by the transitive property of $R$ we have $c R b$. This implies
-$c \in \{x \in S: x R b\} = [b]$. So $c \in [a] \implies c \in [b]$, so $[a] \subset [b]$.  
- 
-We do nearly the same to show $[b] \subset [a]$.   
-
-So $[b] \subset [a]$ and $[a] \subset [b]$, therefore $[a] = [b]$.  
-
-(b) If $a \nsim b$ then $[a] \neq [b]$.  
-
 *Proof:* We proceed by the contrapositive case. That is, if $[a] = [b]$ then 
 $a \sim b$.
 
-Suppose $[a] = [b]$...  
-Show $[a] = [b]$ implies symmetric  
-Show $[a] = [b]$ implies reflexive  
-Show $[a] = [b]$ implies transitive.  
+We approuch the solution in three cases. That is, we show $[a] = [b]$ implies a 
+symmetric, transitive, and reflexive relation. 
 
-Therefor $a \sim b$
+Here we show $[a] = [b]$ implies a symmetric relation.
+Suppose $[a] = [b]$. By definition $[a] = \{x \in S: x R a\} = [b] = \{x \in S: x R b\}$ 
+for some relation $R$. Which implies $aRb$. Since $aRb$, then $a$ must be in 
+$S$, which implies $bRa$. We have $aRb \implies bRa$. Therefore $a R b$ is 
+symmetric. 
 
+Here we show $[a] = [b]$ implies a reflexive relation. 
+Suppose $[a] = [b]$. By definition $[a] = \{x \in S: x R a\} = [b] = \{x \in S: x R b\}$ 
+for some relation $R$. Since $a,b \in S$, this implies $aRa$ and $bRb$. 
+Therefore $aRb$ is reflexive. 
 
+Here we show $[a] = [b]$ implies a transitive transitive relation. 
+Suppose $[a] = [b]$. By definition $[a] = \{x \in S: x R a\} = [b] = \{x \in S: x R b\}$ 
+for some relation $R$. Let $c \in [a]$ so that $aRc$. This means $c \in S$ and $bRc$. 
+By the symmetric property (shown above) we get $cRb$. Now we have $aRc \implies cRb$, 
+therefore $aRb$ is transitive. 
 
-
+We've show $[a] = [b]$ implies that $aRb$ is symmetric, reflexive and transitive, 
+therefor $[a] = [b]$ implies the equivalence relation $a \sim b$.
 
 
 
