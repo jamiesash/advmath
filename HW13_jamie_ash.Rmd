@@ -1,0 +1,138 @@
+---
+output: pdf_document
+---
+
+### Homework 14: Functions
+### author: "Jamie Ash"
+### date: "2022-12-07"
+
+**Question 1:** Let $f: X \rightarrow Y$ and $g: Y \rightarrow X$ both be functions. 
+Determine whether each of the following statement is true or false. If a statement 
+is true, prove it. Otherwise, provide a counter example. 
+
+(a) if $g \circ f$ is injective, then $f$ is injective.
+
+True.  
+*Proof* Suppose $g \circ f$ is injective.   
+So then by def. for any $a, a' \in X$, $g \circ f(a) \neq g \circ f(a')$ when 
+$a \neq a'$. It follows that $g(f(a)) \neq g(f(a'))$ and $f(a) \neq f(a')$ 
+(otherwise $g \circ f$ would not be injective).  
+So then for any $a, a' \in X$, when $a \neq a'$ it follows that $f(a) \neq f(a')$.  
+Therefore $f$ is injective.   
+
+
+(b) if $g \circ f$ is injective, then $g$ is injective.  
+
+False, $g$ can be surgective.   
+Counter example...  
+Let  $Y$ and $X$ be the sets $Y = \{a,b\}$ and $X = \{1, 2, 3\}$.   
+Let $g$ and $f$ be the functions $g = \{ (1, a), (2, b), (3, b)\}$ 
+and $f = \{(a, 1), (b, 2)\}$, so then $g \circ f = \{(a, a),(b, b)\}$.   
+Here $g \circ f$ is injective, but $g$ is surgective.   
+ 
+**Question 3:** Define $g: R \rightarrow R$ by $g(z) = 3z^2 - 4$. Find each of 
+the following sets.
+
+```{r}
+# writing function of g(z) = 3z^2 - 4
+g = function(z){
+  3*z^2 - 4
+} 
+
+# Inverse function. Given the range will return the domain
+gi = function(z){
+  sqrt((z - 4)/3)
+}
+```
+
+(c) $g([-2, 4])$  
+
+*Answer:* I'm just inputting integers but the range is the same. So it's [8, 44].   
+```{r}
+g(-2:4)
+```
+
+(d) $g^{-1}((-10, 1))$ 
+
+*Answer:* The function is undefined at this interval. A negative in the square root symbol
+will return an imaginary number. So I'll go out on a limb and say $g^{-1}((-10, 1)) = \emptyset$.   
+
+```{r, warning = FALSE}
+gi(-10:1)
+```
+
+(e) $g(\emptyset)$  
+
+*Answer:* Hmm... $\emptyset$?  
+
+(f) $g^{-1}(\emptyset)$  
+
+*Answer:* Hmm... $[-\inf, 4]$? or $- \inf < x < 4$ where $x$ is the input to the 
+inverse relation.  
+
+**Question 6:** Let $f: X \rightarrow Y$ be a function, and let $A,B \subset X$
+and $C, D \subset Y$. Determine if each statement is true or false. If it's true
+prove it, if it's false give a counterexample.  
+
+*Note: It is not stated that $f$ is bijective, so while $f^{-1}$ is a 
+relation, $f^{-1}$ may not be a function.
+
+(k) $A \subset f^{-1}(f(A))$  
+
+True.   
+*Informal proof*
+By def. $f^{-1}$'s range is a subset of the domain of $f$. Here the domain of 
+$f$ is $A$, so then the range of $f^{-1}$ is a subset of $A$.   
+
+(l) $f^{-1}(f(A)) \subset A$  
+
+False. Let $f$ be surgective but not injective, so that $f^{-1}$ is not a 
+function. This means the $f^{-1}(A)$ can map back to $A \cup B$ as long as 
+$A \cap B$ are subsets of the domain of $f$, in this case $A \cap B \subset X$. 
+
+(m) $C \subset f(f^{-1}(C))$  
+
+True.
+*Proof*
+
+(m) $f(f^{-1}(C)) \subset C$  
+
+True.
+*Proof*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
