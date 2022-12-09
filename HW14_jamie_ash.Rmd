@@ -5,8 +5,41 @@ date: "2022-12-09"
 output: pdf_document
 ---
 
+**Question 1.** Prove each of the following. I each case, you should create a 
+bijection between the two sets.Briefly justify that your function are in fact 
+bijections.  
 
-**Question 1** 
+(a) $\{ \heartsuit,  \clubsuit, \spadesuit \} = \{ \circ, \square, \triangle \}$  
+
+(b) $\mathbb{N} = \{odd natural numbers\}$
+
+(c) $A \times \{ 1 \} =  A$, where $A$ is any set. 
+
+**Question 2.** Let $\digamma$ denote the set of all functions from $\mathbb{N}$
+to $\{0, 1\}$. 
+
+(a) Describe at least three functions in the set $\digamma$.
+
+(b) Prove that $\mid \digamma \mid = \mid P(\mathbb{N}) \mid$.  
+
+Use multiplicatory rule to show $\mid \digamma \mid = 2^{\mid \mathbb{N} \mid}$.
+*Note: a function with the same input and same out put is an equal function.
+so there's $2 \times 2 \times 2 \times ... \times n$ where n is the last natural
+number. 
+
+elements in $\mathbb{N} = \{1,2,3...n\}$  
+options for each element = $\{ (0,1)_1, (0,1)_2, (0,1)_3...(0,1)_n \}$
+
+
+**Question 3.** Let $X$ be a set. Prove that "it has the same cardinality as" is 
+an equivalence relation on $P(X)$. 
+
+**Question 4.** Prove or disprove: The set $\{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$
+of infinite sequence of integers is countably infinite. 
+
+**Question 5:** Prove that $A$ and $B$ are finite sets with $\mid A \mid = \mid B \mid$,
+then any injection $f: A \rightarrow B$ is also a surjection. Show this is not 
+necessarily true if $A$ and $B$ are not finite. 
 
 
 
