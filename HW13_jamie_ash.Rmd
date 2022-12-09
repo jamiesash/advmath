@@ -92,12 +92,12 @@ $A \cap B$ are subsets of the domain of $f$, in this case $A \cap B \subset X$.
 
 (m) $C \subset f(f^{-1}(C))$  
 
-True.
+True.  
 *Proof*
 
 (m) $f(f^{-1}(C)) \subset C$  
 
-True.
+True.  
 *Proof*
 
 
