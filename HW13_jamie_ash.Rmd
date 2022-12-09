@@ -86,7 +86,9 @@ $f$ is $A$, so then the range of $f^{-1}$ is a subset of $A$.
 
 (l) $f^{-1}(f(A)) \subset A$  
 
-False. Let $f$ be surgective but not injective, so that $f^{-1}$ is not a 
+False. 
+*Informal counter example*
+Let $f$ be surgective but not injective, so that $f^{-1}$ is not a 
 function. This means the $f^{-1}(A)$ can map back to $A \cup B$ as long as 
 $A \cap B$ are subsets of the domain of $f$, in this case $A \cap B \subset X$. 
 
