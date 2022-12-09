@@ -47,7 +47,7 @@ gi = function(z){
 
 (c) $g([-2, 4])$  
 
-*Answer:* I'm just inputting integers but the range is the same. So it's [8, 44].   
+*Answer:* I'm inputting integers, but the range is the same. So it's [8, 44].   
 ```{r}
 g(-2:4)
 ```
@@ -67,8 +67,9 @@ gi(-10:1)
 
 (f) $g^{-1}(\emptyset)$  
 
-*Answer:* Hmm... $[-\inf, 4]$? or $- \inf < x < 4$ where $x$ is the input to the 
-inverse relation.  
+*Answer:*   Hmm... $\emptyset$?
+
+I originaly thought this... $[-\inf, 4]$.
 
 **Question 6:** Let $f: X \rightarrow Y$ be a function, and let $A,B \subset X$
 and $C, D \subset Y$. Determine if each statement is true or false. If it's true

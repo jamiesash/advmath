@@ -9,27 +9,39 @@ output: pdf_document
 bijection between the two sets.Briefly justify that your function are in fact 
 bijections.  
 
-(a) $\{ \heartsuit,  \clubsuit, \spadesuit \} = \{ \circ, \square, \triangle \}$  
+(a) $\mid \{ \heartsuit,  \clubsuit, \spadesuit \}\mid = \mid \{ \circ, \square, \triangle \} \mid$  
 
-(b) $\mathbb{N} = \{odd natural numbers\}$
+(b) $\mid \mathbb{N} \mid = \mid \{odd natural numbers\}\mid$
 
-(c) $A \times \{ 1 \} =  A$, where $A$ is any set. 
+(c) $\mid A \times \{ 1 \} \mid =  \mid A \mid$, where $A$ is any set. 
 
 **Question 2.** Let $\digamma$ denote the set of all functions from $\mathbb{N}$
 to $\{0, 1\}$. 
 
-(a) Describe at least three functions in the set $\digamma$.
+(a) Describe at least three functions in the set $\digamma$. 
+
+$f: \mathbb{N} \rightarrow \{0, 1\}$ where $f(x) = x *0$, or $f(x) = x^0$, or 
+$f(x) = \{$if x is even assign a 1, if x is odd assign a 0$\}$.  
 
 (b) Prove that $\mid \digamma \mid = \mid P(\mathbb{N}) \mid$.  
 
-Use multiplicatory rule to show $\mid \digamma \mid = 2^{\mid \mathbb{N} \mid}$.
-*Note: a function with the same input and same out put is an equal function.
-so there's $2 \times 2 \times 2 \times ... \times n$ where n is the last natural
-number. 
 
-elements in $\mathbb{N} = \{1,2,3...n\}$  
-options for each element = $\{ (0,1)_1, (0,1)_2, (0,1)_3...(0,1)_n \}$
+*Proof*  We proceed by proof of equivalent cases (I am making this term up I 
+think). First I will show that $\mid \digamma \mid =  2^{\mid \mathbb{N} \mid}$. 
+Then I will show that $\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid}$
 
+*case 1.* By the definition of equal functions, for each element 
+$n \in \mathbb{N}$ there are only two possible functions that can send 
+$n  \rightarrow \{0 ,1\}$. So then given the multiplcatory rule of combinitorics 
+(pg. 69 of textbook), there are $2^{\mid \mathbb{N} \mid}$ functions that can 
+send $\mathbb{N} \rightarrow \{0, 1\}$. Thus 
+$\mid \digamma \mid =  2^{\mid \mathbb{N} \mid}$.  
+
+*case 2.*  In class we showed that 
+$\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid}$.   
+
+Therefore $\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid} = \mid \digamma \mid$,
+meaning $\mid P(\mathbb{N}) \mid = \mid \digamma \mid$.
 
 **Question 3.** Let $X$ be a set. Prove that "it has the same cardinality as" is 
 an equivalence relation on $P(X)$. 
@@ -41,11 +53,25 @@ of infinite sequence of integers is countably infinite.
 then any injection $f: A \rightarrow B$ is also a surjection. Show this is not 
 necessarily true if $A$ and $B$ are not finite. 
 
+*Direct proof!!! (p.s. I do not have all my direct proof check marks)*...  
+Suppose that $A$ and $B$ are finite sets with $\mid A \mid = \mid B \mid$.     
+Then the number of inductive functions that can be made from $A$ to $B$ 
+$f: A \rightarrow B$, is described using the binomial function 
+$\binom{\mid A \mid}{\mid B \mid}$. Similarly, the number of bijective functions
+from $A \rightarrow B$ is given by $\binom{\mid B \mid}{\mid A \mid}$.   
+Since $A$ and $B$ are of equal cardinality, then $\binom{\mid B \mid}{\mid A \mid}$ 
+= $\binom{\mid A \mid}{\mid B \mid}$.  
+Thus the number of injective relationships equals the number of bijective 
+relationships.   
+This means all injective functions between $A$ and $B$ are 
+surjective.     
+Therefore any injection, $f: A \rightarrow B$, is also a surjection. 
 
-
-
-
-
+*Note: When describing the number of bijective functions as $\binom{\mid A \mid}{\mid B \mid}$,
+if $\mid A \mid < \mid B \mid$ then $\binom{\mid A \mid}{\mid B \mid} = 0$,
+which agrees with the pigeon hole principle that if $\mid A \mid < \mid B \mid$ 
+then there is no surjective function from $A$ to $B$, and thus no bijective 
+function from $A$ to $B$. 
 
 
 
