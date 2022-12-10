@@ -11,9 +11,35 @@ bijections.
 
 (a) $\mid \{ \heartsuit,  \clubsuit, \spadesuit \}\mid = \mid \{ \circ, \square, \triangle \} \mid$  
 
+*Informal proof* Let $A = \{ \heartsuit,  \clubsuit, \spadesuit \}$ and 
+$B = \{ \circ, \square, \triangle \}$ and the funciton $f: A \rightarrow B$ be
+$f = \{ (\heartsuit, \circ),  (\clubsuit, \square), (\spadesuit, \triangle) \}$.
+$f$ is a bijection from $A$ to $B$, so then 
+$\mid \{ \heartsuit,  \clubsuit, \spadesuit \}\mid = \mid \{ \circ, \square, \triangle \} \mid$. 
+$f$ is injective because every element in $A$ maps to a unique element in $B$. 
+$f$ is a surjection because every element in $B$ is mapped to an element in 
+$A$. $f$'s surgective and injectivenes can be easily seen because $A$ and $B$ 
+are finite and small. $\blacksquare$.  
+ 
 (b) $\mid \mathbb{N} \mid = \mid \{odd natural numbers\}\mid$
 
+*Informal proof* Let $O$ be the set of odd numbers. Then $f: \mathbb{N} \rightarrow O$ as $f(n) = 2n + 1$,
+where $n \in \mathbb{N}$, is a bijection. $f$ is a injection because every element 
+in $\mathbb{N}$ maps to a unique element in $O$. That is all of $\mathbb{N}$ are
+in the domain of $f$, and $f$ is increasing so order is preserved, and each 
+output is unique. $f$ is a surjection because every element in $O$ maps to an 
+element in $\mathbb{B}$, through the inverse function $n = (o - 1)/2$ where 
+$o \in O$. This is further evidence that $f(n) = 2n + 1$ is a bijection, because
+it's inverse is also a function. $\blacksquare$  
+
 (c) $\mid A \times \{ 1 \} \mid =  \mid A \mid$, where $A$ is any set. 
+
+*Informal proof* 
+The set $A \times \{ 1 \}$ looks like... $A \times \{ 1 \} = \{ (a_1,1), (a_2,1), (a_3,1) ... (a_i,1)\}$ where $a_i$ is the $i$'th element in $A \times \{ 1 \}$. The projection of $A \times \{ 1 \}$ onto it's first element is a bijeciton from $A \times \{ 1 \} \rightarrow A$. Writen as $f(a,1) = a$. $f$ is an injection 
+because $f$ accepts the set $A \times \{1\}$, and outputs the set $A$. We know the elements
+output by $f$ are unique because all elements in $A$ are unique (no repeating 
+elements in a set). It is a surjection because all elements of $A$ are mapped to an element
+of $A \times \{1\}$. $\blacksquare$
 
 **Question 2.** Let $\digamma$ denote the set of all functions from $\mathbb{N}$
 to $\{0, 1\}$. 
@@ -25,9 +51,7 @@ $f(x) = \{$if x is even assign a 1, if x is odd assign a 0$\}$.
 
 (b) Prove that $\mid \digamma \mid = \mid P(\mathbb{N}) \mid$.  
 
-
-*Proof*  We proceed by proof of equivalent cases (I am making this term up I 
-think). First I will show that $\mid \digamma \mid =  2^{\mid \mathbb{N} \mid}$. 
+*Proof*  We proceed by proof of equivalent cases (not sure if that's a thing). First I will show that $\mid \digamma \mid =  2^{\mid \mathbb{N} \mid}$. 
 Then I will show that $\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid}$
 
 *case 1.* By the definition of equal functions, for each element 
@@ -41,13 +65,43 @@ $\mid \digamma \mid =  2^{\mid \mathbb{N} \mid}$.
 $\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid}$.   
 
 Therefore $\mid P(\mathbb{N}) \mid = 2^{\mid \mathbb{N} \mid} = \mid \digamma \mid$,
-meaning $\mid P(\mathbb{N}) \mid = \mid \digamma \mid$.
+meaning $\mid P(\mathbb{N}) \mid = \mid \digamma \mid$. $\blacksquare$  
 
 **Question 3.** Let $X$ be a set. Prove that "it has the same cardinality as" is 
 an equivalence relation on $P(X)$. 
 
+We approach this in cases. We show that the "it has the same cardinality as" 
+relation is transitive, reflexive and symmetric. 
+
+
 **Question 4.** Prove or disprove: The set $\{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$
 of infinite sequence of integers is countably infinite. 
+
+*Proof* We show there exists a bijection $f: \mathbb{N} \rightarrow \{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$, so that $\{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$ is countably infinite.  
+
+Let $Y$ be the set $\{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$. 
+The following table describe the bijection $f: \mathbb{N} \rightarrow Y$. I also
+show the set of $f$ in set notation. 
+
+Set...   
+$$
+f = \{(a_1, 1), (a_1, 2), (a_1, 3), (a_1, 4), (a_1, 5)...(a_{\infty}, \infty)\}
+$$
+Table...  
+```{r}
+n = 1:10
+a = rep("a", length(n))
+z = paste(a, as.character(n),sep = "")
+data.frame(n, z)
+```
+
+$f$ is both surgective and injective. Every integer appears once in the column 
+"z" or in the first coordinate of $f$. So, given any integer $b \in \mathbb{Z}$,
+there is some natural number $n$ such that $f(n) = b$, so $f$ is surgective. $f$
+is injective because the way the data frame is constructed it forces $f(m) \neq f(n)$ 
+when $m, n \in \mathbb{N}$ and $m \neq n$. From this bijection we find 
+$\mid \mathbb{N} \mid = \mid Y \mid$, therefore $Y$ is countably infinite. $Y$ being
+the set $\{a_1, a_2, a_3 ... a_i: a \in \mathbb{Z}\}$. $\blacksquare$  
 
 **Question 5:** Prove that $A$ and $B$ are finite sets with $\mid A \mid = \mid B \mid$,
 then any injection $f: A \rightarrow B$ is also a surjection. Show this is not 
@@ -55,17 +109,17 @@ necessarily true if $A$ and $B$ are not finite.
 
 *Direct proof!!! (p.s. I do not have all my direct proof check marks)*...  
 Suppose that $A$ and $B$ are finite sets with $\mid A \mid = \mid B \mid$.     
-Then the number of inductive functions that can be made from $A$ to $B$ 
+Then the number of injective functions that can be made from $A$ to $B$ 
 $f: A \rightarrow B$, is described using the binomial function 
-$\binom{\mid A \mid}{\mid B \mid}$. Similarly, the number of bijective functions
-from $A \rightarrow B$ is given by $\binom{\mid B \mid}{\mid A \mid}$.   
+$\binom{\mid B \mid}{\mid A \mid}$. Similarly, the number of bijective functions
+from $A \rightarrow B$ is given by $\binom{\mid A \mid}{\mid B \mid}$.   
 Since $A$ and $B$ are of equal cardinality, then $\binom{\mid B \mid}{\mid A \mid}$ 
 = $\binom{\mid A \mid}{\mid B \mid}$.  
 Thus the number of injective relationships equals the number of bijective 
 relationships.   
 This means all injective functions between $A$ and $B$ are 
 surjective.     
-Therefore any injection, $f: A \rightarrow B$, is also a surjection. 
+Therefore any injection, $f: A \rightarrow B$, is also a surjection. $\blacksquare$  
 
 *Note: When describing the number of bijective functions as $\binom{\mid A \mid}{\mid B \mid}$,
 if $\mid A \mid < \mid B \mid$ then $\binom{\mid A \mid}{\mid B \mid} = 0$,
@@ -73,7 +127,7 @@ which agrees with the pigeon hole principle that if $\mid A \mid < \mid B \mid$
 then there is no surjective function from $A$ to $B$, and thus no bijective 
 function from $A$ to $B$. 
 
-
+This is not necessarily true if $A$ and $B$ are not finite.
 
 
 

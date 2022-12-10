@@ -23,12 +23,12 @@ Therefore $f$ is injective.
 
 (b) if $g \circ f$ is injective, then $g$ is injective.  
 
-False, $g$ can be surgective.   
+False, $g$ can be surjective.   
 Counter example...  
 Let  $Y$ and $X$ be the sets $Y = \{a,b\}$ and $X = \{1, 2, 3\}$.   
 Let $g$ and $f$ be the functions $g = \{ (1, a), (2, b), (3, b)\}$ 
 and $f = \{(a, 1), (b, 2)\}$, so then $g \circ f = \{(a, a),(b, b)\}$.   
-Here $g \circ f$ is injective, but $g$ is surgective.   
+Here $g \circ f$ is injective, but $g$ is surjective.   
  
 **Question 3:** Define $g: R \rightarrow R$ by $g(z) = 3z^2 - 4$. Find each of 
 the following sets.
@@ -69,7 +69,7 @@ gi(-10:1)
 
 *Answer:*   Hmm... $\emptyset$?
 
-I originaly thought this... $[-\inf, 4]$.
+I originaly thought this... $(-\inf, 4]$ but am going with the empty set .
 
 **Question 6:** Let $f: X \rightarrow Y$ be a function, and let $A,B \subset X$
 and $C, D \subset Y$. Determine if each statement is true or false. If it's true
@@ -82,7 +82,7 @@ relation, $f^{-1}$ may not be a function.
 
 True.   
 *Informal proof*
-By def. $f^{-1}$'s range is a subset of the domain of $f$. Here the domain of 
+$f^{-1}$'s range is a subset of the domain of $f$. Here the domain of 
 $f$ is $A$, so then the range of $f^{-1}$ is a subset of $A$.   
 
 (l) $f^{-1}(f(A)) \subset A$  
@@ -96,17 +96,16 @@ $A \cap B$ are subsets of the domain of $f$, in this case $A \cap B \subset X$.
 (m) $C \subset f(f^{-1}(C))$  
 
 True.  
-*Proof*
+*Proof* $c \in C$ and $f(c) = d \in f^{-1}(C)$ then $c \in f(f^{-1}(C))$. So any element $c$ that is in $f(f^{-1}(C))$ is also in $C$. Therefore $C \subset f(f^{-1}(C))$.  
+reference: (theorem 12.4 pg. 243 in textbook, and an online source at www.math.unl.edu) 
 
 (m) $f(f^{-1}(C)) \subset C$  
 
 True.  
-*Proof*
-
-
-
-
-
+*Proof* Let $c \in f(f^{-1}(C))$, then $c = f(d)$ for some $d \in f^{-1}(C)$, and  
+$f(d) \in C$. So any element $c$ that is in $f(f^{-1}(C))$ 
+is also in $C$. Therefore $c = f(d) \in C$.  
+reference: (theorem 12.4 pg. 243 in textbook, and an online source at www.math.unl.edu) 
 
 
 
