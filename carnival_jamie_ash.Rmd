@@ -1,0 +1,174 @@
+---
+title: "Carnival"
+author: "Jamie Ash"
+date: "2022-12-14"
+output: pdf_document
+---
+
+## Equivalence classes
+**Question 15.** Let $A = \{ cat, dog, monkey\}$. Find all equivalence relations
+on $A$. Justify that you have them all.  
+
+
+Let Nickelodeon be the set $A = \{ cat, dog, monkey\}$.    
+
+I've listed all equivalence classes for the set Nickelodeon $E_1$ through $E_5$ below.    
+
+*Reflexive.* Each relation is symmetric because every element in set Nickelodeon is related to itself.   
+
+*Symmetric.* Whenever one element from set Nickelodeon is 
+related to another element, that element is related back to the original element
+i.e. $\{(cat, dog), (dog, cat)\}$ or $cat R dog \implies dogRcat$. Symmetry is 
+not broken if no elements are related to another (i.e. $E_1$).     
+
+*Transitive.* Each relation is transitive because there is a relation $aRb$ and $bRc$ there is
+the relation $aRc$ where $a,b,c$ are elements in Nickelodeon.   
+
+For each relation I made the elements related to themselves i.e. reflexive. Then
+I thought there would be the cases where there where 0, 1, 2, or 3 symmetric relations.   
+
+*case 1: 0 symmetric relations.* One set. E_1 has 0 symmetric or transitive relations.   
+
+*case 2: 1 symmetric relations.* Three relations. Sets $E_2$ through $E_4$.   
+
+*case 3: 2 symmetric relations.* No relations. Any set with two symmetric relations
+will also need to be transitive. A third symmetric relation would need to exist so
+that the transitivity and symmetry is upheld.   
+
+*case 4: 3 symmetric relations.* One set $E_5$. This includes every eelement and 
+every relation.  
+
+$$
+E_1 = \{(cat, cat), (dog, dog), (monkey, monkey)\}
+$$
+
+$$
+E_2 = \{(cat, dog), (cat, cat), (dog, cat), (dog, dog), (monkey, monkey)\}
+$$
+
+$$
+E_3 = \{(cat, cat), (dog, monkey), (dog, dog), (monkey, dog), (monkey, monkey)\}
+$$
+
+$$
+E_4 = \{(cat, monkey), (cat, cat), (dog, dog), (monkey, cat), (monkey, monkey)\}
+$$
+
+$$
+\begin{aligned}
+E_5 = \{(cat, dog), (cat, monkey), (cat, cat), (dog, monkey), (dog, cat), (dog, dog), \\
+(monkey, dog), (monkey, cat), (monkey, monkey)\}
+\end{aligned}
+$$
+
+
+$\blacksquare$
+
+\newpage 
+
+## Modular arithmatic
+**Question 17.**
+
+Prove for every $n \in \mathbb{N}$.
+$$
+9|(4^{3n}-1)
+$$
+Rewording proof...
+
+If $n \in \mathbb{N}$ then $9|(4^{3n}-1)$.  
+
+*Proof* 
+Suppose $n \in \mathbb{N}$. We proceed by induction.  
+
+*(base case)* $n = 1$
+$$
+\begin{aligned}
+4^{3(1)} - 1 \\
+64 - 1 \\
+63 \\
+\frac{63}{9} = 7 \\
+\end{aligned}
+$$
+
+*(inductive step)* 
+Here we will show that $k$ implies $k + 1$, for $k \geq 1$.  
+
+Suppose $9|(4^{3k}-1)$. By definition...   
+$$ 
+9c = (4^{3k}-1)
+$$
+This simplifies to...  
+$$
+9c = (64^{k}-1)
+$$
+Multiply both sides by 64...  
+$$
+\begin{aligned}
+9c \times 64= (64^{k}-1) \times 64 \\
+9c \times 64= 64^{k+1}-64 \\
+9c \times 64 + 64= 64^{k+1}
+\end{aligned}
+$$
+Add 1 to both sides...  
+$$
+\begin{aligned}
+9c \times 64 + 64 - 1 = 64^{k+1} - 1 \\
+9c \times 64 + 63 = 64^{k+1} - 1
+\end{aligned}
+$$
+
+Observe the left side of the equation $9c \times 64 + 63$. It is divisible by $9$
+without remainder because we can factor out a 9 so that 
+$9(c \times 64 + 7) = 0(mod(9))$. By substituting the left hand side of this 
+equation with $0(mod(9))$ we get...  
+
+$$
+0(mod(9)) = 64^{k+1} - 1 
+$$
+
+Returning equation to it's OG form  
+$$
+0(mod(9)) = 4^{3k+1} - 1 
+$$
+and thus...  
+$$
+9|(4^{3k+1} - 1) 
+$$
+Therefore $9|(4^{3k}-1) \implies 9|(4^{3k+1}-1)$ and this proof holds for all 
+natural numbers $n \in \mathbb{N}$. $\blacksquare$
+
+## Quantifier proof disproof.  
+
+**Question 12.** Prove or disprove: There exists a positive real number $x$ for 
+which $x^2 > \sqrt{x}$  
+
+*Proof*
+Let $x$ be the positive real number 0.5 such that
+
+```{r}
+x = 0.5
+x^2 < sqrt(x)
+```
+
+Therefore there exists a positive real number $x$ for which which 
+$x^2 > \sqrt{x}$. $\blacksquare$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
